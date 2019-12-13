@@ -1,0 +1,183 @@
+<!-- <ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="app/categories/travel"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Travel Details</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="travel-details-content">
+<ion-fab vertical="top" horizontal="start" slot="fixed">
+  <ion-fab-button >
+      <ion-back-button ion-fab-button defaultHref="app/user"></ion-back-button>
+    <!-- <ion-icon name="arrow-back"></ion-icon> -->
+  </ion-fab-button>
+</ion-fab>
+  <ion-row class="image-row">
+     
+          
+    <ion-col size="12">
+      <app-image-shell [mode]="'cover'" animation="spinner" class="add-overlay details-image" [src]="'./assets/sample-images/xage.jpg'">
+        <app-aspect-ratio [ratio]="{w:64, h:50}">
+          <span class="checkbox-subtitle1">Xage Mode</span>
+        </app-aspect-ratio>
+      </app-image-shell>
+    </ion-col>
+
+  </ion-row>
+  <ion-row class="description-row">
+    <ion-col size="12">
+      <!-- <h3 class="details-name">
+        <app-text-shell animation="bouncing" [data]="''"></app-text-shell>
+      </h3> -->
+      <p class="details-short-description">
+        <app-text-shell  animation="bouncing" [data]="'Top Songs'"></app-text-shell>
+      </p>
+    </ion-col>
+
+  
+   
+ </ion-row>
+
+
+ <ion-item class="notification-item" lines="none">
+  <ion-row class="notification-item-wrapper">
+  
+    <ion-col class="details-wrapper">
+      <h2 class="details-name">Astrothunder</h2>
+      <p class="details-description">Travis Scott ■ ASTROWORLD</p>
+    </ion-col>
+    <ion-col size="2" class="date-wrapper">
+      <h3 class="notification-date">02:03</h3>
+    </ion-col>
+  </ion-row>
+</ion-item>
+
+<ion-item class="notification-item" lines="none">
+  <ion-row class="notification-item-wrapper">
+  
+    <ion-col class="details-wrapper">
+      <h2 class="details-name">Astrothunder</h2>
+      <p class="details-description">Travis Scott ■ ASTROWORLD</p>
+    </ion-col>
+    <ion-col size="2" class="date-wrapper">
+      <h3 class="notification-date">02:03</h3>
+    </ion-col>
+  </ion-row>
+</ion-item>
+
+
+<ion-row class="description-row">
+  <ion-col size="12">
+    <!-- <h3 class="details-name">
+      <app-text-shell animation="bouncing" [data]="''"></app-text-shell>
+    </h3> -->
+    <p class="details-short-description">
+      <app-text-shell  animation="bouncing" [data]="'Albums'"></app-text-shell>
+    </p>
+    <div class="user-friends-section">
+        <ion-row class="friends-row">
+          <ion-col [routerLink]="['/app/user/album']"class="friend-item" size="3" >
+            <app-aspect-ratio [ratio]="{w: 1, h: 1}">
+              <app-image-shell class="friend-picture" [src]="'./assets/sample-images/xage.jpg'"></app-image-shell>
+            </app-aspect-ratio>
+            <span class="friend-name">
+              <app-text-shell [data]="'Xage Mode'"></app-text-shell>
+            </span>
+          </ion-col>
+          <ion-col [routerLink]="['/app/user/album']"class="friend-item" size="3" >
+            <app-aspect-ratio [ratio]="{w: 1, h: 1}">
+              <app-image-shell class="friend-picture" [src]="'./assets/sample-images/xage.jpg'"></app-image-shell>
+            </app-aspect-ratio>
+            <span class="friend-name">
+              <app-text-shell [data]="'Xage Mode'"></app-text-shell>
+            </span>
+          </ion-col>
+          <ion-col [routerLink]="['/app/user/album']"class="friend-item" size="3" >
+            <app-aspect-ratio [ratio]="{w: 1, h: 1}">
+              <app-image-shell class="friend-picture" [src]="'./assets/sample-images/xage.jpg'"></app-image-shell>
+            </app-aspect-ratio>
+            <span class="friend-name">
+              <app-text-shell [data]="'Xage Mode'"></app-text-shell>
+            </span>
+          </ion-col>
+        </ion-row>
+        </div>
+  </ion-col>
+
+
+ 
+</ion-row>
+
+
+
+
+<ion-row class="description-row">
+  <ion-col size="12">
+    <!-- <h3 class="details-name">
+      <app-text-shell animation="bouncing" [data]="''"></app-text-shell>
+    </h3> -->
+    <p class="details-short-description">
+      <app-text-shell  animation="bouncing" [data]="'Singles & EPs'"></app-text-shell>
+    </p>
+    <div class="user-friends-section">
+    <ion-row class="friends-row">
+      <ion-col [routerLink]="['/app/user/album']"class="friend-item" size="3" >
+        <app-aspect-ratio [ratio]="{w: 1, h: 1}">
+          <app-image-shell class="friend-picture" [src]="'./assets/sample-images/xage.jpg'"></app-image-shell>
+        </app-aspect-ratio>
+        <span class="friend-name">
+          <app-text-shell [data]="'Xage Mode'"></app-text-shell>
+        </span>
+      </ion-col>
+      <ion-col [routerLink]="['/app/user/album']"class="friend-item" size="3" >
+        <app-aspect-ratio [ratio]="{w: 1, h: 1}">
+          <app-image-shell class="friend-picture" [src]="'./assets/sample-images/xage.jpg'"></app-image-shell>
+        </app-aspect-ratio>
+        <span class="friend-name">
+          <app-text-shell [data]="'Xage Mode'"></app-text-shell>
+        </span>
+      </ion-col>
+      <ion-col [routerLink]="['/app/user/album']"class="friend-item" size="3" >
+        <app-aspect-ratio [ratio]="{w: 1, h: 1}">
+          <app-image-shell class="friend-picture" [src]="'./assets/sample-images/xage.jpg'"></app-image-shell>
+        </app-aspect-ratio>
+        <span class="friend-name">
+          <app-text-shell [data]="'Xage Mode'"></app-text-shell>
+        </span>
+      </ion-col>
+    </ion-row>
+    </div>
+  
+  </ion-col>
+
+
+ 
+</ion-row>
+
+ 
+ 
+<ion-row class="description-row">
+  <ion-col size="12">
+    <!-- <h3 class="details-name">
+      <app-text-shell animation="bouncing" [data]="''"></app-text-shell>
+    </h3> -->
+    <p class="details-short-description">
+      <app-text-shell  animation="bouncing" [data]="'About'"></app-text-shell>
+
+    </p>
+
+    <p class="details-description">
+        <app-text-shell style="color:white; font-size: 13px;" animation="bouncing"  [data]="'Hailing from Namuwongo a suburb in the mid city of Uganda ,Kampala, Xage Mode real names Baguma Patrick is a home grown talent of crude bars that hails top of his city with break out hits like Cooperfield '"></app-text-shell>
+
+    </p>
+  </ion-col>
+
+
+ 
+</ion-row>
+
+
+
+</ion-content>

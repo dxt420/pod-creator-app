@@ -1,0 +1,114 @@
+// Custom variables
+// Note:  These ones were added by us and have nothing to do with Ionic CSS Custom Properties
+:host {
+  // --page-margin: var(--app-narrow-margin);
+}
+
+ion-content {
+  --background: linear-gradient(to top, #060606, #690000);
+
+}
+
+ion-toolbar {
+  --background: #680000;
+}
+
+
+ion-item {
+  --ion-background-color: red !important;
+  }
+
+
+  .item, .list, .item-content, .item-complex {
+    --ion-background-color: transparent !important;
+    }
+
+
+    .user-photos-section {
+      margin: calc(var(--page-margin) * 2) var(--page-margin) var(--page-margin);
+      // padding-bottom: calc(var(--page-margin) * 2);
+      margin-top: 0px;
+      margin-left: 20px;
+    
+      .heading-row {
+        margin-bottom: var(--page-margin);
+        justify-content: space-between;
+        align-items: center;
+    
+        .details-section-title {
+          margin: 0px;
+        }
+    
+        .heading-call-to-action {
+          padding: calc(var(--page-margin) / 2) calc(var(--page-margin) / 4);
+          text-decoration: none;
+          color: var(--ion-color-secondary);
+        }
+      }
+    
+      .pictures-row {
+        --ion-grid-columns: 4;
+        --ion-grid-column-padding: 0px;
+    
+        margin: 0px calc(var(--page-pictures-gutter) * -1);
+    
+        .picture-item {
+          padding: 0px var(--page-pictures-gutter) calc(var(--page-pictures-gutter) * 2);
+        }
+      }
+    }
+
+// Note:  All the CSS variables defined below are overrides of Ionic elements CSS Custom Properties
+.notifications-content {
+  ion-item-divider {
+    --background: var(--ion-color-light);
+    --padding-start: var(--page-margin);
+  }
+
+  .notification-item {
+    --padding-start: 0px;
+    --inner-padding-end: 0px;
+
+    padding: var(--page-margin);
+    color: var(--ion-color-medium);
+    box-shadow: inset 0 8px 2px -9px var(--ion-color-darkest);
+
+    .notification-item-wrapper {
+      --ion-grid-column-padding: 0px;
+
+      width: 100%;
+      align-items: center;
+    }
+
+    .details-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding-left: var(--page-margin);
+
+      .details-name {
+        margin-top: 0px;
+        margin-bottom: 5px;
+        font-size: 16px;
+      	font-weight: 400;
+      	letter-spacing: 0.2px;
+      	color: var(--ion-color-secondary);
+      }
+
+      .details-description {
+        font-size: 12px;
+        margin: 0px;
+      }
+    }
+
+    .date-wrapper {
+      align-self: flex-start;
+
+      .notification-date {
+        margin: 0px;
+        font-size: 12px;
+        text-align: end;
+      }
+    }
+  }
+}

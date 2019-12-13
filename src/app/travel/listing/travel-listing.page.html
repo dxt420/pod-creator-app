@@ -1,0 +1,38 @@
+
+
+<ion-header no-border>
+  
+    <ion-toolbar mode="ios">
+        <ion-buttons color="light" slot="start">
+            <ion-back-button color="light" defaultHref="app/user"></ion-back-button>
+          </ion-buttons>
+        
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content class="user-profile-content">
+    <div  class="user-photos-section">
+        <ion-row class="heading-row">
+          <h3 class="details-section-title">Playlists</h3>
+       
+        </ion-row>
+
+        <ion-item style="margin-bottom:5px" *ngFor="let item of listing.items" class="notification-item" lines="none">
+            <ion-row class="notification-item-wrapper">
+                <ion-col size="3">
+                    <app-aspect-ratio [ratio]="{w: 1, h: 1}">
+                      <app-image-shell class="notification-image" [src]="item.image" [alt]="'user image'"></app-image-shell>
+                    </app-aspect-ratio>
+                  </ion-col>
+              <ion-col class="details-wrapper">
+                <h2 class="details-name">Astrothunder</h2>
+               
+              </ion-col>
+            
+            </ion-row>
+          </ion-item>
+
+
+       
+      </div>
+</ion-content>

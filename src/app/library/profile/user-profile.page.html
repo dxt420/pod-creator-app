@@ -1,0 +1,78 @@
+<ion-header no-border>
+  <ion-toolbar>
+      <ion-title style="padding-left: 12px;" color="light">Library</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="user-profile-content">
+    <ion-item  class="notification-item" lines="none">
+        <ion-row class="notification-item-wrapper">
+        
+          <ion-col class="details-wrapper">
+            <h2 class="details-name">Playlists</h2>
+           
+          </ion-col>
+          <ion-col size="2" class="date-wrapper">
+            <h3 class="notification-date"><ion-icon name="ios-arrow-forward"></ion-icon></h3>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+
+
+      <ion-item  class="notification-item" lines="none">
+          <ion-row class="notification-item-wrapper">
+          
+            <ion-col class="details-wrapper">
+              <h2 class="details-name">Songs</h2>
+             
+            </ion-col>
+            <ion-col size="2" class="date-wrapper">
+              <h3 class="notification-date"><ion-icon name="ios-arrow-forward"></ion-icon></h3>
+            </ion-col>
+          </ion-row>
+        </ion-item>
+
+        
+
+        <ion-item  class="notification-item" lines="none">
+            <ion-row class="notification-item-wrapper">
+            
+              <ion-col class="details-wrapper">
+                <h2 class="details-name">Artists</h2>
+               
+              </ion-col>
+              <ion-col size="2" class="date-wrapper">
+                <h3 class="notification-date"><ion-icon name="ios-arrow-forward"></ion-icon></h3>
+              </ion-col>
+            </ion-row>
+          </ion-item>
+
+          <ion-item  class="notification-item" lines="none">
+              <ion-row class="notification-item-wrapper">
+              
+                <ion-col class="details-wrapper">
+                  <h2 class="details-name">Downloaded Music</h2>
+                 
+                </ion-col>
+                <ion-col size="2" class="date-wrapper">
+                  <h3 class="notification-date"><ion-icon name="ios-arrow-forward"></ion-icon></h3>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+      
+    
+  <div class="user-photos-section">
+    <ion-row class="heading-row">
+      <h3 class="details-section-title">{{ 'Recently Played' | translate }}</h3>
+   
+    </ion-row>
+    <ion-row class="pictures-row">
+      <ion-col class="picture-item" size="2" *ngFor="let photo of profile.photos">
+        <app-image-shell [mode]="'cover'" [src]="photo.image" class="user-photo-image">
+          <app-aspect-ratio [ratio]="{w:1, h:1}">
+          </app-aspect-ratio>
+        </app-image-shell>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

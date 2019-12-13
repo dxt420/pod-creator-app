@@ -1,0 +1,132 @@
+
+
+<ion-content class="user-profile-content">
+
+    <div class="user-friends-section">
+        <ion-row  class="heading-row">
+          <h3 text-center   class="details-section-titleX">{{ 'Suggested playlists' | translate }}</h3>
+        
+        </ion-row>
+        <ion-row class="friends-row">
+    
+          <ion-col [routerLink]="['/app/categories/fashion']" class="friend-item" size="3" *ngFor="let friend of profile.friends">
+            <app-aspect-ratio [ratio]="{w: 1, h: 1}">
+              <app-image-shell class="friend-picture" [src]="friend.image"></app-image-shell>
+            </app-aspect-ratio>
+            <span class="friend-name">
+              <app-text-shell  [data]="friend.name"></app-text-shell>
+            </span>
+          </ion-col>
+        </ion-row>
+      </div>
+
+
+  <div class="user-friends-section">
+    <ion-row  class="heading-row">
+      <h3 text-center   class="details-section-titleX">{{ 'Popular and trending' | translate }}</h3>
+    
+    </ion-row>
+    <ion-row class="friends-row">
+      <ion-col [routerLink]="['/app/user/album']" class="friend-item" size="3" *ngFor="let friend of profile.friends">
+        <app-aspect-ratio [ratio]="{w: 1, h: 1}">
+          <app-image-shell class="friend-picture" [src]="friend.image"></app-image-shell>
+        </app-aspect-ratio>
+        <span class="friend-name">
+          <app-text-shell [data]="friend.name"></app-text-shell>
+        </span>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="user-friends-section">
+    <ion-row class="heading-row">
+      <h3 class="details-section-title">{{ 'Fresh Mixes' | translate }}</h3>
+      <a class="heading-call-to-action">{{ 'SEE_ALL' | translate }}</a>
+    </ion-row>
+    <ion-row class="friends-row">
+      <ion-col class="friend-item" size="2.5" *ngFor="let friend of profile.friends">
+        <app-aspect-ratio [ratio]="{w: 1, h: 1}">
+          <app-image-shell class="friend-picture" [src]="friend.image"></app-image-shell>
+        </app-aspect-ratio>
+        <span class="friend-name">
+          <app-text-shell [data]="friend.name"></app-text-shell>
+        </span>
+      </ion-col>
+    </ion-row>
+  </div>
+
+
+  <div class="user-friends-section">
+      <ion-row class="heading-row">
+        <h3 class="details-section-title">{{ 'More Playlists' | translate }}</h3>
+        <a class="heading-call-to-action">{{ 'SEE_ALL' | translate }}</a>
+      </ion-row>
+      <ion-row class="friends-row">
+        <ion-col class="friend-item" size="2.5" *ngFor="let friend of profile.friends">
+          <app-aspect-ratio [ratio]="{w: 1, h: 1}">
+            <app-image-shell class="friend-picture" [src]="friend.image"></app-image-shell>
+          </app-aspect-ratio>
+          <span class="friend-name">
+            <app-text-shell [data]="friend.name"></app-text-shell>
+          </span>
+        </ion-col>
+      </ion-row>
+    </div>
+
+
+  <!-- This is bettter off in an a more detailed environment so as to show related artists like under playlists, show "Artists featured in this playlist" -->
+  <!-- This is bettter off in an a more detailed environment so as to show related artists like under playlists, show "Artists featured in this playlist" -->
+ 
+ 
+ 
+  <!-- <div class="user-friends-section">
+      <ion-row class="heading-row">
+        <h3 text-center class="details-section-title">{{ 'Artists' | translate }}</h3>
+      </ion-row>
+      <ion-row class="friends-row">
+        <ion-col class="friend-item" size="2" *ngFor="let friend of profile.friends">
+          <app-aspect-ratio [ratio]="{w: 1, h: 1}">
+            <app-image-shell class="friend-picture" style="border-radius:50%" [src]="friend.image"></app-image-shell>
+          </app-aspect-ratio>
+          <span class="friend-name">
+            <app-text-shell [data]="friend.name"></app-text-shell>
+          </span>
+        </ion-col>
+      </ion-row>
+    </div> -->
+
+
+  
+
+  <!-- <div class="user-friends-section">
+    <ion-row class="heading-row">
+      <h3 class="details-section-title">{{ 'Popular Artists (Nullified due to db indexing)' | translate }}</h3>
+      <a class="heading-call-to-action">{{ 'SEE_ALL' | translate }}</a>
+    </ion-row>
+    <ion-row class="friends-row">
+      <ion-col [routerLink]="['/app/artist']" class="friend-item" size="2" *ngFor="let friend of profile.friends">
+        <app-aspect-ratio [ratio]="{w: 1, h: 1}">
+          <app-image-shell class="friend-picture" style="border-radius:50%" [src]="friend.image"></app-image-shell>
+        </app-aspect-ratio>
+        <span class="friend-name">
+          <app-text-shell [data]="friend.name"></app-text-shell>
+        </span>
+      </ion-col>
+    </ion-row>
+  </div> -->
+
+  <!-- <div class="user-photos-section">
+    <ion-row class="heading-row">
+      <h3 class="details-section-title">{{ 'Shows and Concerts' | translate }}</h3>
+      <a class="heading-call-to-action">{{ 'SEE_ALL' | translate }}</a>
+    </ion-row>
+    <ion-row class="pictures-row">
+      <ion-col class="picture-item" size="2" *ngFor="let photo of profile.photos">
+        <app-image-shell [mode]="'cover'" [src]="photo.image" class="user-photo-image">
+          <app-aspect-ratio [ratio]="{w:1, h:1}">
+          </app-aspect-ratio>
+        </app-image-shell>
+      </ion-col>
+    </ion-row>
+  </div> -->
+</ion-content>
